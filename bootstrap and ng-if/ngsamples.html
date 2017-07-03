@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="ngsamples.js" type="text/javascript"></script>
+</head>
+
+<body ng-app="App">
+    <div ng-controller="EmpController">
+        Employee Details
+        <button ng-click="getEmployees()">Get Employees</button>
+        <table>
+            <tr ng-repeat="emp in Employees">
+                <td><a href="" ng-click="getEmployee(emp.id)">{{emp.Name}}</a></td>
+            </tr>
+        </table>
+        <div ng-model="Employee">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>Gender</td>
+                    <td>Age</td>
+                    <td>Salary</td>
+                </tr>
+                <tr>
+                    <td>{{Employee.Name}}</td>
+                    <td>{{Employee.Gender}}</td>
+                    <td>{{Employee.Age}}</td>
+                    <td>{{Employee.Salary}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
